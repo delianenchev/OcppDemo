@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoapCore", "SoapCore\SoapCore.csproj", "{79C81B68-D21F-42D7-8946-1BED9B489030}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfInIIS", "WcfInIIS\WcfInIIS.csproj", "{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{79C81B68-D21F-42D7-8946-1BED9B489030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79C81B68-D21F-42D7-8946-1BED9B489030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79C81B68-D21F-42D7-8946-1BED9B489030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
