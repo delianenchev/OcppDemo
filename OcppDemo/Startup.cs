@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,6 +9,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Models;
+using SoapCore;
 
 namespace OcppDemo
 {
@@ -30,6 +34,8 @@ namespace OcppDemo
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSoapCore();
+            services.TryAddSingleton<ISampleService, SampleService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -48,6 +54,13 @@ namespace OcppDemo
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            #region SOAP
+            var transportBinding = new HttpTransportBindingElement();
+            var textEncodingBinding = new TextMessageEncodingBindingElement(MessageVersion.Soap12WSAddressingAugust2004, System.Text.Encoding.UTF8);
+            var customBinding = new CustomBinding(transportBinding, textEncodingBinding);
+            app.UseSoapEndpoint<ISampleService>("/SOAP/service.wsdl", customBinding, SoapSerializer.DataContractSerializer);
+            #endregion
 
             app.UseMvc();
         }
