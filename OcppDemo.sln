@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoapCore", "SoapCore\SoapCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfInIIS", "WcfInIIS\WcfInIIS.csproj", "{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfInIISWithOcpp", "WcfInIISWithOcpp\WcfInIISWithOcpp.csproj", "{09716BB8-5C30-4161-8990-A79A1FF84F6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87F9208C-6CC4-44F6-8F6E-34780FF7E2D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09716BB8-5C30-4161-8990-A79A1FF84F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09716BB8-5C30-4161-8990-A79A1FF84F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09716BB8-5C30-4161-8990-A79A1FF84F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09716BB8-5C30-4161-8990-A79A1FF84F6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
