@@ -9,13 +9,15 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ServiceModel;
 
 namespace WcfInIISWithOcpp
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="urn://Ocpp/Cs/2012/06/", ConfigurationName="WcfInIISWithOcpp.CentralSystemService")]
+    //[System.ServiceModel.ServiceContractAttribute(Namespace="urn://Ocpp/Cs/2012/06/", ConfigurationName="WcfInIISWithOcpp.CentralSystemService")]
+    [ServiceContract]
     public interface ICentralSystemService
     {
         

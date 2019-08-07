@@ -59,7 +59,7 @@ namespace OcppDemo
             var transportBinding = new HttpTransportBindingElement();
             var textEncodingBinding = new TextMessageEncodingBindingElement(MessageVersion.Soap12WSAddressingAugust2004, System.Text.Encoding.UTF8);
             var customBinding = new CustomBinding(transportBinding, textEncodingBinding);
-            app.UseSoapEndpoint<ISampleService>("/SOAP/service.wsdl", customBinding, SoapSerializer.DataContractSerializer);
+            app.UseSoapEndpoint<ISampleService>("/SOAP/service.wsdl", customBinding, SoapSerializer.XmlSerializer); // DataContractSerializer
             #endregion
 
             app.UseMvc();
